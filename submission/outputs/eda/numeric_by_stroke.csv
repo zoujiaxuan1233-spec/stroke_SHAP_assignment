@@ -1,0 +1,5 @@
+,age,age,age,age,age,age,avg_glucose_level,avg_glucose_level,avg_glucose_level,avg_glucose_level,avg_glucose_level,avg_glucose_level,bmi,bmi,bmi,bmi,bmi,bmi
+,count,mean,std,median,min,max,count,mean,std,median,min,max,count,mean,std,median,min,max
+stroke,,,,,,,,,,,,,,,,,,
+0,4861,41.971544949598844,22.29194038460048,43.0,0.08,82.0,4861,104.79551326887471,43.84606850027662,91.47,55.12,267.76,4700,28.823063829787234,7.908287073929469,28.0,10.3,97.6
+1,249,67.72819277108434,12.727419360404237,71.0,1.32,82.0,249,132.54473895582328,61.9210555806822,105.22,56.11,271.74,209,30.471291866028707,6.329451820046447,29.7,16.9,56.6

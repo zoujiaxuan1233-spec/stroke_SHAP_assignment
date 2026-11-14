@@ -1,0 +1,366 @@
+{
+  "seed": 2021,
+  "data_sha256": "644d473b05d2797006bd94865e4f8bb057f0c721617911613c82c8fcfc707420",
+  "split_counts": {
+    "train": {
+      "n": 3066,
+      "positive": 149
+    },
+    "validation": {
+      "n": 1022,
+      "positive": 50
+    },
+    "test": {
+      "n": 1022,
+      "positive": 50
+    }
+  },
+  "preprocessor_feature_names": [
+    "age",
+    "avg_glucose_level",
+    "bmi",
+    "hypertension",
+    "heart_disease",
+    "gender_Female",
+    "gender_Male",
+    "gender_Other",
+    "ever_married_No",
+    "ever_married_Yes",
+    "work_type_Govt_job",
+    "work_type_Never_worked",
+    "work_type_Private",
+    "work_type_Self-employed",
+    "work_type_children",
+    "Residence_type_Rural",
+    "Residence_type_Urban",
+    "smoking_status_Unknown",
+    "smoking_status_formerly smoked",
+    "smoking_status_never smoked",
+    "smoking_status_smokes"
+  ],
+  "training_numeric_medians": [
+    44.0,
+    91.82,
+    27.9,
+    0.0,
+    0.0
+  ],
+  "rf_params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced_subsample",
+    "criterion": "gini",
+    "max_depth": 8,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 200,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 2021,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "mlp_params": {
+    "activation": "relu",
+    "alpha": 0.01,
+    "batch_size": 128,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "early_stopping": false,
+    "epsilon": 1e-08,
+    "hidden_layer_sizes": [
+      32,
+      16
+    ],
+    "learning_rate": "constant",
+    "learning_rate_init": 0.001,
+    "max_fun": 15000,
+    "max_iter": 600,
+    "momentum": 0.9,
+    "n_iter_no_change": 25,
+    "nesterovs_momentum": true,
+    "power_t": 0.5,
+    "random_state": 2021,
+    "shuffle": true,
+    "solver": "adam",
+    "tol": 0.0001,
+    "validation_fraction": 0.1,
+    "verbose": false,
+    "warm_start": false
+  },
+  "mlp_iterations": 600,
+  "mlp_loss": 0.049147379795959026,
+  "mlp_warnings": [
+    "Stochastic Optimizer: Maximum iterations (600) reached and the optimization hasn't converged yet.",
+    "divide by zero encountered in matmul",
+    "invalid value encountered in matmul",
+    "overflow encountered in matmul"
+  ],
+  "resampled_training_counts": {
+    "0": 2917,
+    "1": 2917
+  },
+  "explanation_sample_size": 120,
+  "explanation_positive_count": 6,
+  "background_size": 100,
+  "background_positive_count": 4,
+  "second_background_positive_count": 5,
+  "kernel_nsamples": 512,
+  "tree_seconds": 0.09057329100323841,
+  "kernel_seconds": 3.175475916999858,
+  "kernel_local_max_abs_sampling_difference": 0.005357789138222935,
+  "tree_base": 0.5000000000000003,
+  "kernel_base": 0.04623646550195552,
+  "tree_max_residual": 4.229255834431456e-15,
+  "tree_additivity_tolerance": 1e-05,
+  "kernel_max_residual": 5.551115123125783e-16,
+  "tree_global": [
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.16953842469792127
+    },
+    {
+      "feature": "ever_married",
+      "mean_abs_shap": 0.05612628900285479
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.047676756751723906
+    },
+    {
+      "feature": "avg_glucose_level",
+      "mean_abs_shap": 0.0403623085794415
+    },
+    {
+      "feature": "smoking_status",
+      "mean_abs_shap": 0.026460013086946312
+    },
+    {
+      "feature": "work_type",
+      "mean_abs_shap": 0.021345922281027566
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.014698335033270837
+    },
+    {
+      "feature": "hypertension",
+      "mean_abs_shap": 0.01381145865851163
+    },
+    {
+      "feature": "Residence_type",
+      "mean_abs_shap": 0.00857979336768641
+    },
+    {
+      "feature": "heart_disease",
+      "mean_abs_shap": 0.008056991123315826
+    }
+  ],
+  "kernel_global": [
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.04045599174649453
+    },
+    {
+      "feature": "smoking_status",
+      "mean_abs_shap": 0.026923059956099102
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.02641556751445976
+    },
+    {
+      "feature": "hypertension",
+      "mean_abs_shap": 0.021826996662679465
+    },
+    {
+      "feature": "work_type",
+      "mean_abs_shap": 0.020811978906066744
+    },
+    {
+      "feature": "avg_glucose_level",
+      "mean_abs_shap": 0.01991191242343693
+    },
+    {
+      "feature": "Residence_type",
+      "mean_abs_shap": 0.016964404806391185
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.01679600971764096
+    },
+    {
+      "feature": "ever_married",
+      "mean_abs_shap": 0.015170808977876786
+    },
+    {
+      "feature": "heart_disease",
+      "mean_abs_shap": 0.007407443723520538
+    }
+  ],
+  "case": {
+    "row_index": 18,
+    "csv_line": 20,
+    "position_in_explanation": 50,
+    "actual": 1,
+    "raw_features": {
+      "age": 60.0,
+      "avg_glucose_level": 89.22,
+      "bmi": 37.8,
+      "hypertension": 0,
+      "heart_disease": 0,
+      "gender": "Female",
+      "ever_married": "No",
+      "work_type": "Private",
+      "Residence_type": "Urban",
+      "smoking_status": "never smoked"
+    },
+    "tree_score": 0.33760319621261764,
+    "kernel_score": 0.0002511441495886149,
+    "tree_sum": -0.16239680378737922,
+    "kernel_sum": -0.04598532135236692,
+    "tree_local": [
+      {
+        "feature": "ever_married",
+        "value": "No",
+        "shap_value": -0.07809591521230963
+      },
+      {
+        "feature": "age",
+        "value": "60.0",
+        "shap_value": 0.07357295328596974
+      },
+      {
+        "feature": "avg_glucose_level",
+        "value": "89.22",
+        "shap_value": -0.054447967615023386
+      },
+      {
+        "feature": "bmi",
+        "value": "37.8",
+        "shap_value": -0.04621714087665027
+      },
+      {
+        "feature": "smoking_status",
+        "value": "never smoked",
+        "shap_value": -0.030943895402720044
+      },
+      {
+        "feature": "work_type",
+        "value": "Private",
+        "shap_value": -0.018417240873855396
+      },
+      {
+        "feature": "Residence_type",
+        "value": "Urban",
+        "shap_value": 0.016569097046827665
+      },
+      {
+        "feature": "hypertension",
+        "value": "0",
+        "shap_value": -0.015402576391213842
+      },
+      {
+        "feature": "heart_disease",
+        "value": "0",
+        "shap_value": -0.011684067991537594
+      },
+      {
+        "feature": "gender",
+        "value": "Female",
+        "shap_value": 0.0026699502431335293
+      }
+    ],
+    "kernel_local": [
+      {
+        "feature": "work_type",
+        "value": "Private",
+        "shap_value": -0.07116159708106355
+      },
+      {
+        "feature": "Residence_type",
+        "value": "Urban",
+        "shap_value": 0.027203359941181306
+      },
+      {
+        "feature": "hypertension",
+        "value": "0",
+        "shap_value": -0.020340082201944464
+      },
+      {
+        "feature": "ever_married",
+        "value": "No",
+        "shap_value": 0.013511920074890315
+      },
+      {
+        "feature": "bmi",
+        "value": "37.8",
+        "shap_value": -0.011342219963043463
+      },
+      {
+        "feature": "gender",
+        "value": "Female",
+        "shap_value": 0.007527955593208008
+      },
+      {
+        "feature": "smoking_status",
+        "value": "never smoked",
+        "shap_value": 0.006866920730330142
+      },
+      {
+        "feature": "avg_glucose_level",
+        "value": "89.22",
+        "shap_value": 0.0038707737764527377
+      },
+      {
+        "feature": "age",
+        "value": "60.0",
+        "shap_value": -0.0033829793783547195
+      },
+      {
+        "feature": "heart_disease",
+        "value": "0",
+        "shap_value": 0.0012606271559767704
+      }
+    ]
+  },
+  "stability": {
+    "kernel": {
+      "original_top3": [
+        "work_type",
+        "Residence_type",
+        "hypertension"
+      ],
+      "second_top3": [
+        "work_type",
+        "hypertension",
+        "Residence_type"
+      ],
+      "top3_overlap": 3,
+      "original_top3_signs_preserved": true,
+      "max_abs_difference": 0.017019854539717723
+    }
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "scipy": "1.16.3",
+      "scikit-learn": "1.7.2",
+      "shap": "0.49.1",
+      "imbalanced-learn": "0.14.0",
+      "matplotlib": "3.10.7",
+      "numba": "0.68.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "total_seconds": 8.9959346249816
+}

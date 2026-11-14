@@ -1,0 +1,1662 @@
+Task 1: running the retained teaching script and extended EDA
+Training 3066 / validation 1022 / test 1022; 21 transformed columns
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+Metrics: {
+  "random_forest": {
+    "validation": {
+      "threshold": 0.52,
+      "accuracy": 0.8718199608610567,
+      "balanced_accuracy": 0.638559670781893,
+      "precision": 0.15966386554621848,
+      "recall": 0.38,
+      "f1": 0.22485207100591717,
+      "macro_f1": 0.5774927021696252,
+      "roc_auc": 0.7955555555555556,
+      "average_precision": 0.13098399291221813,
+      "brier": 0.10495132452534578,
+      "tn": 872,
+      "fp": 100,
+      "fn": 31,
+      "tp": 19,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "test": {
+      "threshold": 0.52,
+      "accuracy": 0.8718199608610567,
+      "balanced_accuracy": 0.7049588477366255,
+      "precision": 0.19548872180451127,
+      "recall": 0.52,
+      "f1": 0.28415300546448086,
+      "macro_f1": 0.6068803716199352,
+      "roc_auc": 0.8645679012345678,
+      "average_precision": 0.2217463653021925,
+      "brier": 0.09854862246129543,
+      "tn": 865,
+      "fp": 107,
+      "fn": 24,
+      "tp": 26,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "test_at_0_5": {
+      "threshold": 0.5,
+      "accuracy": 0.8561643835616438,
+      "balanced_accuracy": 0.7441563786008231,
+      "precision": 0.1949685534591195,
+      "recall": 0.62,
+      "f1": 0.2966507177033493,
+      "macro_f1": 0.6082708629388681,
+      "roc_auc": 0.8645679012345678,
+      "average_precision": 0.2217463653021925,
+      "brier": 0.09854862246129543,
+      "tn": 844,
+      "fp": 128,
+      "fn": 19,
+      "tp": 31,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "positive_class_index": 1
+  },
+  "neural_network": {
+    "validation": {
+      "threshold": 0.04,
+      "accuracy": 0.8463796477495108,
+      "balanced_accuracy": 0.5777572016460906,
+      "precision": 0.1037037037037037,
+      "recall": 0.28,
+      "f1": 0.15135135135135136,
+      "macro_f1": 0.5334486719102104,
+      "roc_auc": 0.6554526748971193,
+      "average_precision": 0.09690400133844776,
+      "brier": 0.09267031238822035,
+      "tn": 851,
+      "fp": 121,
+      "fn": 36,
+      "tp": 14,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "test": {
+      "threshold": 0.04,
+      "accuracy": 0.8522504892367906,
+      "balanced_accuracy": 0.5618724279835391,
+      "precision": 0.096,
+      "recall": 0.24,
+      "f1": 0.13714285714285715,
+      "macro_f1": 0.528175494917068,
+      "roc_auc": 0.7032304526748971,
+      "average_precision": 0.12994747746789295,
+      "brier": 0.0932159570681671,
+      "tn": 859,
+      "fp": 113,
+      "fn": 38,
+      "tp": 12,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "test_at_0_5": {
+      "threshold": 0.5,
+      "accuracy": 0.8972602739726028,
+      "balanced_accuracy": 0.5381069958847737,
+      "precision": 0.10144927536231885,
+      "recall": 0.14,
+      "f1": 0.11764705882352941,
+      "macro_f1": 0.5315508021390374,
+      "roc_auc": 0.7032304526748971,
+      "average_precision": 0.12994747746789295,
+      "brier": 0.0932159570681671,
+      "tn": 910,
+      "fp": 62,
+      "fn": 43,
+      "tp": 7,
+      "n": 1022,
+      "positive_support": 50,
+      "prevalence": 0.04892367906066536
+    },
+    "positive_class_index": 1
+  },
+  "always_negative": {
+    "threshold": 0.5,
+    "accuracy": 0.9510763209393346,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "macro_f1": 0.48746238716148443,
+    "roc_auc": 0.5,
+    "average_precision": 0.04892367906066536,
+    "brier": 0.04892367906066536,
+    "tn": 972,
+    "fp": 0,
+    "fn": 50,
+    "tp": 0,
+    "n": 1022,
+    "positive_support": 50,
+    "prevalence": 0.04892367906066536
+  }
+}
+Tasks 2 to 4: path-dependent Tree SHAP on class 1 probability
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/submission/code/run_assignment.py:96: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(phi, x, show=False, max_display=max_display, plot_size=(9, 6))
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+Task 6: Kernel SHAP for a different neural network model
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/submission/code/run_assignment.py:96: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(phi, x, show=False, max_display=max_display, plot_size=(9, 6))
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: divide by zero encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: overflow encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+/Users/pangpang/Curriculum/7009 周日11-2/assignment1/.work/ml_env/lib/python3.12/site-packages/shap/explainers/_kernel.py:706: RuntimeWarning: invalid value encountered in matmul
+  w = np.linalg.solve(X.T @ WX, WX.T @ y)
+Completed: {
+  "tree_seconds": 0.10151250002672896,
+  "kernel_seconds": 3.5259214999969117,
+  "tree_max_residual": 4.229255834431456e-15,
+  "kernel_max_residual": 5.551115123125783e-16,
+  "total_seconds": 9.305012500029989
+}

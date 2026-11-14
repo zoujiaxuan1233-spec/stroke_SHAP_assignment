@@ -1,0 +1,55 @@
+{
+  "repository": "https://github.com/deepfindr/xai-series",
+  "commit": "91542416a4924182685104a4192dc037b562ddec",
+  "checked_on": "2026-11-12",
+  "files": [
+    {
+      "file": "05_lrp.py",
+      "local_sha256": "a73f541d99511790c1ac52d1f7a0a34036d7ee41001adf6f9bb163b5c67bd1e1",
+      "upstream_sha256": "a73f541d99511790c1ac52d1f7a0a34036d7ee41001adf6f9bb163b5c67bd1e1",
+      "identical": true
+    },
+    {
+      "file": "03_shap.py",
+      "local_sha256": "10602996b966ae7f86c90058128df0130d4ed23e4d6f1f1e8729155788e3f081",
+      "upstream_sha256": "10602996b966ae7f86c90058128df0130d4ed23e4d6f1f1e8729155788e3f081",
+      "identical": true
+    },
+    {
+      "file": "02_lime.py",
+      "local_sha256": "121a5d0c967fc9fcc18a2e7757583a8c18e36a770a0656afd6f0c49f0cecc858",
+      "upstream_sha256": "121a5d0c967fc9fcc18a2e7757583a8c18e36a770a0656afd6f0c49f0cecc858",
+      "identical": true
+    },
+    {
+      "file": "00_data_exploration.py",
+      "local_sha256": "098f0bd28b64c3477b3c578b84aa076a737518ad7cb58422fa09eb1f583845e6",
+      "upstream_sha256": "098f0bd28b64c3477b3c578b84aa076a737518ad7cb58422fa09eb1f583845e6",
+      "identical": true
+    },
+    {
+      "file": "utils.py",
+      "local_sha256": "506c304a39a937a2fb2607fc28edb972716b1139f97ca952d353bc687a7a43d5",
+      "upstream_sha256": "506c304a39a937a2fb2607fc28edb972716b1139f97ca952d353bc687a7a43d5",
+      "identical": true
+    },
+    {
+      "file": "01_interpretable_models.py",
+      "local_sha256": "66d2285032a1ab6470d9a8b0450a836d0f3291607774608c9938c9136673004c",
+      "upstream_sha256": "66d2285032a1ab6470d9a8b0450a836d0f3291607774608c9938c9136673004c",
+      "identical": true
+    },
+    {
+      "file": "04_counterfactuals.py",
+      "local_sha256": "1a537ac4b464b28555739e7de2e16b1f525e5e84f5c7e177ea9be90e37a62210",
+      "upstream_sha256": "1a537ac4b464b28555739e7de2e16b1f525e5e84f5c7e177ea9be90e37a62210",
+      "identical": true
+    },
+    {
+      "file": "data/README.md",
+      "local_sha256": "58026ff9ee0b9ae7c02112109d21ab28058c6bad997219a74df5fd008e240a4b",
+      "upstream_sha256": "58026ff9ee0b9ae7c02112109d21ab28058c6bad997219a74df5fd008e240a4b",
+      "identical": true
+    }
+  ]
+}
